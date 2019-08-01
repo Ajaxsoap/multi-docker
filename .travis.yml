@@ -5,7 +5,7 @@ services:
 before_install:
   - docker build -t emrmarvin/react-test -f ./client/Dockerfile.dev ./client
 
-secript:
+script:
   - docker run -e CI=true emrmarvin/react-test npm test
 
 after_success:
