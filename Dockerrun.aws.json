@@ -1,0 +1,40 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "client",
+      "image": "emrmarvin/multi-client",
+      "hostname": "client",
+      "essential": false,
+      "memory": 256
+    },
+    {
+      "name": "server",
+      "image": "emrmarvin/multi-server",
+      "hostname": "api",
+      "essential": false,
+      "memory": 256
+    },
+    {
+      "name": "worker",
+      "image": "emrmarvin/multi-worker",
+      "hostname": "worker",
+      "essential": false,
+      "memory": 256
+    },
+    {
+      "name": "nginx",
+      "image": "emrmarvin/multi-nginx",
+      "hostname": "nginx",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": [ "client", "server" ],
+      "memory": 256
+    }
+  ]
+}
