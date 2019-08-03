@@ -13,14 +13,14 @@
       "image": "emrmarvin/multi-server",
       "hostname": "api",
       "essential": false,
-      "memory": 128
+      "memory": 256
     },
     {
       "name": "worker",
       "image": "emrmarvin/multi-worker",
       "hostname": "worker",
       "essential": false,
-      "memory": 128
+      "memory": 256
     },
     {
       "name": "nginx",
@@ -34,7 +34,7 @@
         }
       ],
       "links": [ "client", "server" ],
-      "memory": 128
+      "memory": 256
     }
   ]
 }
