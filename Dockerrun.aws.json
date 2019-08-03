@@ -6,7 +6,7 @@
       "image": "emrmarvin/multi-client",
       "hostname": "client",
       "essential": false,
-      "memory": 128
+      "memory": 256
     },
     {
       "name": "server",
