@@ -34,3 +34,4 @@ after_success:
       secure: $AWS_ACCESS_KEY
     access_secret_key:
       secure: $AWS_SECRET_KEY
+      
