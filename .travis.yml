@@ -21,17 +21,16 @@ after_success:
   - docker push emrmarvin/multi-server
   - docker push emrmarvin/multi-worker
 
-  deploy:
-    provider: elasticbeanstalk
-    region: us-east-2
-    app: multi-docker
-    environment: MultiDocker-env
-    bucket_name: elasticbeanstalk-us-east-2-882197782846
-    bucket_path: docker-multi
-    on:
-      branch: master
-    access_key_id: 
-      secure: $AWS_ACCESS_KEY
-    access_secret_key:
-      secure: $AWS_SECRET_KEY
-      
+  # deploy:
+  #   provider: elasticbeanstalk
+  #   region: us-east-2
+  #   app: multi-docker
+  #   environment: MultiDocker-env
+  #   bucket_name: elasticbeanstalk-us-east-2-882197782846
+  #   bucket_path: docker-multi
+  #   on:
+  #     branch: master
+  #   access_key_id: 
+  #     secure: $AWS_ACCESS_KEY
+  #   access_secret_key:
+  #     secure: $AWS_SECRET_KEY
